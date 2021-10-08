@@ -1,14 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Ball6 : MonoBehaviour
+public class Ball7 : MonoBehaviour
 {
     private Camera cam;
     private Rigidbody2D rigidBody2D;
 	private bool isMoving = false;
 	private Vector2 mousePos;
 	public float velocity = 5f;
+	private int score = 0;
+	public Text scoreText;
 	
     // Start is called before the first frame update
     void Start()
@@ -38,6 +41,12 @@ public class Ball6 : MonoBehaviour
     
     void OnCollisionEnter2D(Collision2D col)
     {
-        isMoving = false;
+        if(col.gameObject.tag == "Square") 
+        {
+			Destroy(col.gameObject);
+			score++;
+			scoreText.text = score.ToString();
+		}
+        else isMoving = false;
     }
 }
