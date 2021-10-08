@@ -123,6 +123,50 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &113326862
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 113326863}
+  - component: {fileID: 113326864}
+  m_Layer: 0
+  m_Name: SquareSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &113326863
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113326862}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &113326864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113326862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3449a93b088794158a7e00eacf6907c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1882221801603963150, guid: 174fd38cd7503db08993f142dc212549, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -562,7 +606,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 977998449}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 6cd321ebda31b8d2583f682493e2d1bd, type: 2}
+  m_Material: {fileID: 6200000, guid: 7c6404ea6105637dc8ef6241bfdd9720, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -664,10 +708,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 977998449}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d2e68960827dce6b8e84680c2990c1b, type: 3}
+  m_Script: {fileID: 11500000, guid: 86f3f655ffed80dc484ace0e8aaaf4a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 10
+  velocity: 5
 --- !u!1 &1220110726
 GameObject:
   m_ObjectHideFlags: 0

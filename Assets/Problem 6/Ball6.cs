@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Problem5 : MonoBehaviour
+public class Ball6 : MonoBehaviour
 {
-	private Camera cam;
+    private Camera cam;
     private Rigidbody2D rigidBody2D;
 	private bool isMoving = false;
 	private Vector2 mousePos;
