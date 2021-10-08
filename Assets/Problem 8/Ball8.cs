@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Ball7 : MonoBehaviour
+public class Ball8 : MonoBehaviour
 {
     private Camera cam;
     private Rigidbody2D rigidBody2D;
@@ -26,7 +26,6 @@ public class Ball7 : MonoBehaviour
         if (Input.GetMouseButtonDown(0)) 
         {
 			mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-			Debug.Log(mousePos);
 			isMoving = true;
         }
         
@@ -46,7 +45,15 @@ public class Ball7 : MonoBehaviour
 			Destroy(col.gameObject);
 			score++;
 			scoreText.text = score.ToString();
+			StartCoroutine(delaySpawn(3f));
 		}
         else isMoving = false;
     }
+    
+    IEnumerator delaySpawn(float s)
+    {
+		yield return new WaitForSeconds(s);
+		Vector2 ballPos = transform.position;
+		SpawnSquare8.spawnSquare(ballPos);
+	}
 }
